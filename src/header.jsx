@@ -32,7 +32,7 @@ function Header({ setsearchquery }) {
 
       </nav>
 
-      <button style={{width:"90px" , height:"35px", textAlign:"center",marginTop:"12px",borderRadius:"20px"}} onClick={togglemode}> Switch mode</button>
+      <button style={{width:"90px" , height:"35px", textAlign:"center",marginTop:"12px",borderRadius:"20px"}} onClick={togglemode}> dark mode</button>
 
     </header>
   );
