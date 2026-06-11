@@ -28,7 +28,7 @@ function Header({ setsearchquery }) {
 
         <Link to="/signup">SIGN UP</Link>
 
-        <Link to="/signin">SIGN IN</Link>
+        <Link to="/login">LOGIN</Link>
 
       </nav>
 

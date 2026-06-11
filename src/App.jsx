@@ -1,8 +1,8 @@
 import Header from './header';
 import { Route, Routes} from 'react-router-dom';
 import Products from './Products';
-import Signin from './Signin';
 import Signup from './Signup';
+import Login from  './Login';
 import { useState } from 'react'; 
 import './App.css'
 import About from './About';
@@ -18,8 +18,7 @@ const [searchquery,setsearchquery]=useState('')
       <Route path='/about'  element={<About/>}  />
       <Route path='/products'  element={<Products searchquery={searchquery}/>}  />
       <Route path='/signup'  element={<Signup/>} />
-      <Route path='/signin'  element={<Signin/>}  />
-
+      <Route path='/login'  element={<Login/>}  />
   </Routes>
 
 
