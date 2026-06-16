@@ -1,5 +1,5 @@
 import Header from './header';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes,Navigate} from 'react-router-dom';
 import Products from './Products';
 import Signup from './Signup';
 import Login from  './Login';
@@ -16,12 +16,10 @@ const [searchquery,setsearchquery]=useState('')
   <Routes>
       <Route path='/' element={<Products searchquery={searchquery}/>}/>
       <Route path='/about'  element={<About/>}  />
-      <Route path='/products'  element={<Products searchquery={searchquery}/>}  />
+      <Route path='/products'  element={<Products searchquery={searchquery}/>} />
       <Route path='/signup'  element={<Signup/>} />
       <Route path='/login'  element={<Login/>}  />
   </Routes>
-
-
  
   </>
   )
