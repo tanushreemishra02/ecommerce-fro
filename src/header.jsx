@@ -9,7 +9,7 @@ function Header({ setsearchquery }) {
   return (
     <header style={{ display: "flex", justifyContent: "space-around" }}>
 
-      <img style={{height:"60px" , width:"100px",borderRadius:"50%"}} src="src\assets\image.png" alt="LOGO" />
+      <img style={{height:"60px" , width:"100px",borderRadius:"50%"}} src="src\assets\brand.jpeg" alt="LOGO" />
 
       <input
         placeholder="Search product"
