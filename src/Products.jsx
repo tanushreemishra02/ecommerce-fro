@@ -1,47 +1,35 @@
-import { useState, useEffect } from "react";
-import Card from './Card';
+
+import { useState } from "react";
+import Card from "./Card";
+import productsData from "./data/product.json";
 
 function Products({ searchquery }) {
+  const [products] = useState(productsData);
 
-  const [products, setproducts] = useState([]);
-
- useEffect(() => {
-
-  fetch('https://ecom-backened.onrender.com/products')
-    .then(response => response.json())
-    .then(data => setproducts(data))
-    .catch(error => console.log(error))
-
-}, [])
-
-
-  let filteredproducts = products.filter((p) => {
+  const filteredproducts = products.filter((p) => {
     return p.title
       .toLowerCase()
-      .includes(searchquery.toLowerCase());
+      .includes((searchquery || "").toLowerCase());
   });
 
   return (
     <>
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center"
-      }}
-    >
-      {
-        filteredproducts.map((e) => {
-          return (
-            <Card
-              image={e.image}
-              title={e.title}
-              price={e.price}
-            />
-          );
-        })
-      }
-    </div>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {filteredproducts.map((e) => (
+          <Card
+            key={e.id}
+            image={e.image}
+            title={e.title}
+            price={e.price}
+          />
+        ))}
+      </div>
     </>
   );
 }
